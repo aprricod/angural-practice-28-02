@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+  <mat-card-header>Новая форма</mat-card-header>
+  <br />
+  <form class="example-form" #myForm="ngForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput type="text" type="text" [(ngModel)]="name" name="name" />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <input matInput [(ngModel)]="age" name="age" />
+    </mat-form-field>
+  </form>
+</mat-card>
+<br />
+
+<p>Помаши, если твоё имя {{ name }} и тебе {{ age }}</p>
+<br />
+<!-- <pre>{{ name | json }}</pre>
+<pre>{{ age | json }}</pre> -->
+<pre>{{ myForm.value | json }}</pre>

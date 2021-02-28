@@ -1,0 +1,9 @@
+<form #myForm="ngForm">
+  <input type="text" [(ngModel)]="name" name="name" />
+  <br />
+  <input type="number" [(ngModel)]="age" name="age" />
+  <br />
+  <input type="date" [(ngModel)]="date" name="date" />
+</form>
+<br />
+<pre>{{ myForm.value | json }}</pre>
