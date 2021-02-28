@@ -6,6 +6,15 @@
   <input type="email" formControlName="email" />
   <br />
   <input type="date" formControlName="date" />
+  <br />
+  <div formArrayName="phones">
+    <input
+      type="text"
+      *ngFor="let phone of form.get('phones')['controls']; let id = index"
+      [formControlName]="id"
+    />
+  </div>
+<button (click)="add()" >Add element</button>
 </form>
 
 <pre>{{ form.value | json }}</pre>

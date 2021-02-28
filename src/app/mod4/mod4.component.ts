@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-mod4',
@@ -8,13 +8,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class Mod4Component implements OnInit {
   form: FormGroup;
-  constructor(fb: FormBuilder) {
+  constructor(public fb: FormBuilder) {
     this.form = fb.group({
       name: fb.control(null),
       age: fb.control(null),
       email: fb.control(null),
       date: fb.control(null),
+      phones: fb.array([]),
     });
+  }
+
+  add() {
+    (this.form.get('phones') as FormArray).push(this.fb.control(null));
   }
 
   ngOnInit(): void {}

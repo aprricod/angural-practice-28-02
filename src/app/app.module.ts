@@ -8,6 +8,7 @@ import { Mod2Module } from './mod2/mod2.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Mod3Module } from './mod3/mod3.module';
 import { Mod4Module } from './mod4/mod4.module';
+import { Mod5Module } from './mod5/mod5.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Mod4Module } from './mod4/mod4.module';
     Mod2Module,
     BrowserAnimationsModule,
     Mod3Module,
-    Mod4Module
+    Mod4Module,
+    Mod5Module
   ],
   providers: [],
   bootstrap: [AppComponent]
