@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <input type="text" formControlName="name" />
+  <br />
+  <input type="number" formControlName="age" />
+  <br />
+  <input type="email" formControlName="email" />
+  <br />
+  <input type="date" formControlName="date" />
+</form>
+
+<pre>{{ form.value | json }}</pre>
